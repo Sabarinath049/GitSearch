@@ -14,13 +14,17 @@
             <h1 class="heading">Search the Github User</h1>
             <label for="username">Username</label>
             <input class="input-element" type="text" id="username" placeholder="Please enter the Username"/>
+            <p class="show-error" id="errorParagraph"></p>
             <div class="buttons-container">
-              <button class="button" id="submit">Submit</button>
-              <button class="button" id="clear">Clear</button>
+              <button class="button submit-button" id="submit">Submit</button>
+              <button class="button clear-button" id="clear">Clear</button>
             </div>
           </div>
+        <div class="spinner-border d-none loader" id="spinner"></div>
         <div id="root" class="fetched-users-container">
-          <div class="spinner-border d-none" id="spinner"></div>
+        </div>
+        <div id="userProfileDetails">
+
         </div>
     </div>
     <div>
