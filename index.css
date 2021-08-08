@@ -16,11 +16,15 @@
     justify-content: center;
     align-items: center;
 }
+label, input{
+    width: 100%;
+    align-self: flex-start;
+}
 @media screen and (max-width: 320px){
     .github-container{
         max-width: 320px;
     }
     .search-container{
-        max-width: 100%;
+        max-width: 320px;
     }
 }
