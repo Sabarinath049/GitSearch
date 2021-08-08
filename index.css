@@ -8,13 +8,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 30px 0px 30px;
+    padding: 30px 30px 30px 30px;
 }
 .search-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 0px 10px 0px;
 }
 label, input{
     width: 100%;
@@ -22,24 +23,44 @@ label, input{
     margin: 10px 0px 10px 0px;
 }
 .button{
-    margin: 10px 10px 0px 0px
+    margin: 10px 10px 0px 0px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    width: 100px;
+    height: 30px;
 }
 .input-element{
-    padding: 14px;
-    border-radius: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    outline: none;
+    border: 0.5px solid black;
+}
+.show-error{
+    color: #dc3545;
 }
 .buttons-container{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 320px;
+}
+.submit-button{
+    background-color: #20c997;
+}
+.clear-button{
+    background-color: #dc3545;
+}
+.loader{
+    margin: 20px 0px 20px 0px;
 }
 .fetched-users-container{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
+    width: 320px;
 }
 .user-div{
     display: flex;
@@ -47,14 +68,13 @@ label, input{
     justify-content: center;
     align-items: center;
     padding: 14px;
-    margin: 14px;
-    min-width: 250px;
+    margin: 14px 0px 14px 0px;
 }
 .profile-image{
-    width: 100px;
-    height: 100px;
+    border-radius: 8px;
 }
 .user-name{
+    margin: 10px 0px 10px 0px;
     font-size: 24px;
     font-weight: 600;
 }
@@ -70,9 +90,147 @@ label, input{
 
 @media screen and (max-width: 320px){
     .github-container{
-        max-width: 320px;
+        min-width: 320px;
     }
     .search-container{
-        max-width: 100px;
+        min-width: 100%;
     }
+    .heading{
+        font-size: 20px;
+    }
+    .user-div{
+        width: 320px;
+    }
+    .profile-image{
+        width: 250px;
+        height: 250px;
+    }
+    .fetched-users-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .github-container{
+        min-width: 375px;
+    }
+    .search-container{
+        min-width: 100%;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .user-div{
+        width: 320px;
+    }
+    .profile-image{
+        width: 300px;
+        height: 300px;
+    }
+    .fetched-users-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px){
+    .github-container{
+        min-width: 376px;
+    }
+    .search-container{
+        min-width: 100%;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .user-div{
+        width: 320px;
+    }
+    .profile-image{
+        width: 330px;
+        height: 330px;
+    }
+    .fetched-users-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .github-container{
+        min-width: 100%;
+    }
+    .search-container{
+        min-width: 100%;
+    }
+    .heading{
+        font-size: 30px;
+    }
+    .user-div{
+        width: 330px;
+    }
+    .profile-image{
+        width: 250px;
+        height: 250px;
+    }
+    .fetched-users-container{
+        min-width: 100%;
+    }
+    .input-element{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .github-container{
+        min-width: 100%;
+    }
+    .search-container{
+        min-width: 100%;
+    }
+    .heading{
+        font-size: 40px;
+    }
+    .user-div{
+        width: 310px;
+    }
+    .profile-image{
+        width: 250px;
+        height: 250px;
+    }
+    .fetched-users-container{
+        min-width: 100%;
+    }
+    .input-element{
+        width: 40%;
+    }    
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .github-container{
+        min-width: 100%;
+    }
+    .search-container{
+        min-width: 100%;
+    }
+    .heading{
+        font-size: 40px;
+    }
+    .user-div{
+        width: 310px;
+    }
+    .profile-image{
+        width: 250px;
+        height: 250px;
+    }
+    .fetched-users-container{
+        min-width: 100%;
+    }
+    .input-element{
+        width: 30%;
+    }       
 }
