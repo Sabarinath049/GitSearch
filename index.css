@@ -234,3 +234,28 @@ label, input{
         width: 30%;
     }       
 }
+
+@media screen and (min-width: 1441px) and (max-width: 2560px) {
+    .github-container{
+        min-width: 100%;
+    }
+    .search-container{
+        min-width: 100%;
+    }
+    .heading{
+        font-size: 60px;
+    }
+    .user-div{
+        width: 310px;
+    }
+    .profile-image{
+        width: 250px;
+        height: 250px;
+    }
+    .fetched-users-container{
+        min-width: 100%;
+    }
+    .input-element{
+        width: 30%;
+    }
+}
