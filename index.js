@@ -2,11 +2,13 @@ let root = document.getElementById("root")
 let inputElement = document.getElementById("username")
 let submitButtonElement = document.getElementById("submit")
 let clearButtonElement = document.getElementById("clear")
+let spinnerElement = document.getElementById("spinner")
 
 let usernameValue
 const client_id = 'c5868f39180303a9e8e4';
 const client_secret = '32735d5e618c1fc35ce25bcc7c44b0472f590a7c';
 submitButtonElement.onclick=function(){
+    spinnerElement.classList.remove("d-none")
     if (inputElement.value!==""){
         usernameValue = inputElement.value
         inputElement.value=""
@@ -27,6 +29,7 @@ clearButtonElement.onclick=function(){
 }
 
 function displayUserProfile(eachItem){
+    spinnerElement.classList.add("d-none")
     const {login, avatar_url} = eachItem
     let div = document.createElement("div")
     div.classList.add("user-div")
@@ -38,10 +41,12 @@ function displayUserProfile(eachItem){
     heading.classList.add("user-name")
     heading.textContent=login
     div.appendChild(heading)
+    let anchorElement = document.createElement("a")
+    div.appendChild(anchorElement)
     let viewProfileButton = document.createElement("button")
     viewProfileButton.textContent="View Profile"
     viewProfileButton.classList.add("view-button")
-    div.appendChild(viewProfileButton)
+    anchorElement.appendChild(viewProfileButton)
     root.appendChild(div)
 }
 
