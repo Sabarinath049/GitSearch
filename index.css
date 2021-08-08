@@ -19,12 +19,60 @@
 label, input{
     width: 100%;
     align-self: flex-start;
+    margin: 10px 0px 10px 0px;
 }
+.button{
+    margin: 10px 10px 0px 0px
+}
+.input-element{
+    padding: 14px;
+    border-radius: 8px;
+}
+.buttons-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 320px;
+}
+.fetched-users-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.user-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    margin: 14px;
+    min-width: 250px;
+}
+.profile-image{
+    width: 100px;
+    height: 100px;
+}
+.user-name{
+    font-size: 24px;
+    font-weight: 600;
+}
+.view-button{
+    background-color: #4285f4;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 320px){
     .github-container{
         max-width: 320px;
     }
     .search-container{
-        max-width: 320px;
+        max-width: 100px;
     }
 }
