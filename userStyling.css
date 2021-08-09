@@ -38,7 +38,7 @@
     outline: none;
     border: none;
     padding: 10px;
-    margin: 10px 0px 10px 0px;
+    margin: 14px 0px 14px 0px;
     border-radius: 4px;
     font-size: 18px;
 }
@@ -58,6 +58,18 @@
     outline: none;
     border: none;
     font-size: 14px;
+}
+
+.stars{
+    background-color: #0A1931;
+}
+
+.forks{
+    background-color: #185ADB;
+}
+
+.watchers{
+    background-color: #FFC947;
 }
 
 .basic-details-container{
@@ -98,7 +110,6 @@
     color: white;
     border-radius: 4px;
     padding: 8px;
-    background-color: #0d6efd;
     outline: none;
     border: none;   
     margin: 8px; 
@@ -422,16 +433,16 @@
 
 @media screen and (min-width: 1441px) and (max-width: 2560px) {
     .user-details-container{
-        min-width: 1440px;
+        min-width: 1800px;
     }
     .main-profile-landing{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-width: 1200px;
+        min-width: 1800px;
     }
     .profile-container{
-        min-width: 1220px;
+        min-width: 180px;
     }
     .profile-button{
         min-width: 350px;
@@ -452,26 +463,26 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        min-width: 1200px;
+        min-width: 1800px;
     } 
     .basic-details-container{
-        min-width: 1200px;
+        min-width: 1800px;
     }   
     .detail-item{
-        font-size: 20px;
+        font-size: 35px;
     }
     .repo-container{
         justify-content: flex-start;
         align-items: flex-start;
-        min-width: 1200px;
+        min-width: 1800px;
         padding: 14px;
         margin: 10px 0px 10px 0px;
     }
     a{
-        font-size: 30px;
+        font-size: 40px;
     }
     p{
-        font-size: 20px;
+        font-size: 30px;
     }
     .repo-item{
         flex-direction: row;
@@ -480,6 +491,6 @@
         width: 100%;
     }
     .repo-stat-item{
-        font-size: 24px;
+        font-size: 30px;
     }
 }

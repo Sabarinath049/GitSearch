@@ -112,17 +112,17 @@ function showUserRepos(jsonData){
 
     let repoStars = document.createElement("button")
     repoStars.textContent = "Stars: " + stargazers_count
-    repoStars.classList.add("repo-stat-item")
+    repoStars.classList.add("repo-stat-item","stars")
     repoStatsContainer.appendChild(repoStars)
 
     let repoWatchers = document.createElement("button")
     repoWatchers.textContent = "Watchers: " + watchers_count
-    repoWatchers.classList.add("repo-stat-item")
+    repoWatchers.classList.add("repo-stat-item","watchers")
     repoStatsContainer.appendChild(repoWatchers)
 
     let repoForks = document.createElement("button")
     repoForks.textContent = "Forks: " + forks_count
-    repoForks.classList.add("repo-stat-item")
+    repoForks.classList.add("repo-stat-item","forks")
     repoStatsContainer.appendChild(repoForks)
 
     let repoCreatedAt = document.createElement("p")
