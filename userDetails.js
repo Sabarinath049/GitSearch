@@ -64,20 +64,24 @@ function showUserDetails(jsonData){
     let basicDetails = document.createElement("div")
     basicDetails.classList.add("basic-details-container")
 
-    let blogData = document.createElement("h3")
+    let blogData = document.createElement("h1")
     blogData.textContent = "Website/Blog: " + blog
+    blogData.classList.add("detail-item")
     basicDetails.appendChild(blogData)
 
-    let locationData = document.createElement("h3")
+    let locationData = document.createElement("h1")
     locationData.textContent = "Location: " + location
+    locationData.classList.add("detail-item")
     basicDetails.appendChild(locationData)
 
-    let hireableData = document.createElement("h3")
+    let hireableData = document.createElement("h1")
     hireableData.textContent = "Hireable: " + hireable
+    hireableData.classList.add("detail-item")
     basicDetails.appendChild(hireableData)
 
-    let emailData = document.createElement("h3")
+    let emailData = document.createElement("h1")
     emailData.textContent = "Email: " + email
+    emailData.classList.add("detail-item")
     basicDetails.appendChild(emailData)
 
     mainProfileLanding.appendChild(basicDetails)
@@ -90,7 +94,7 @@ function showUserRepos(jsonData){
 
     let reposContainer = document.createElement("div")
     reposContainer.id = "repo-container"
-    repoContainer.classList.add("repo-container")
+    reposContainer.classList.add("repo-container")
     
     let repoItem = document.createElement("div")
     repoItem.classList.add("repo-item")
@@ -108,18 +112,21 @@ function showUserRepos(jsonData){
 
     let repoStars = document.createElement("button")
     repoStars.textContent = "Stars: " + stargazers_count
+    repoStars.classList.add("repo-stat-item")
     repoStatsContainer.appendChild(repoStars)
 
     let repoWatchers = document.createElement("button")
     repoWatchers.textContent = "Watchers: " + watchers_count
+    repoWatchers.classList.add("repo-stat-item")
     repoStatsContainer.appendChild(repoWatchers)
 
     let repoForks = document.createElement("button")
     repoForks.textContent = "Forks: " + forks_count
+    repoForks.classList.add("repo-stat-item")
     repoStatsContainer.appendChild(repoForks)
 
     let repoCreatedAt = document.createElement("p")
-    repoCreatedAt.textContent = created_at
+    repoCreatedAt.textContent = "Created at: " + created_at
     reposContainer.appendChild(repoCreatedAt)
 
     userDetailsContainer.appendChild(reposContainer)
@@ -140,7 +147,7 @@ fetch (repoUrl, options)
 })
 .then((jsonData) => {
     for (let repo of jsonData){
-        
+        showUserRepos(repo)
     }
     
 })
