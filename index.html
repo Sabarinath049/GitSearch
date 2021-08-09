@@ -10,16 +10,16 @@
   </head>
   <body>
     <div class="github-container">
-        <div class="search-container">
-            <h1 class="heading">Search the Github User</h1>
-            <label for="username">Username</label>
-            <input class="input-element" type="text" id="username" placeholder="Please enter the Username"/>
-            <p class="show-error" id="errorParagraph"></p>
-            <div class="buttons-container">
-              <button class="button submit-button" id="submit">Submit</button>
-              <button class="button clear-button" id="clear">Clear</button>
+        <form id="form" class="search-container" action="">
+          <h1 class="heading">Search the Github User</h1>
+          <label for="username">Username</label>
+          <input class="input-element" type="text" id="username" placeholder="Please enter the Username"/>
+          <p class="show-error" id="errorParagraph"></p>
+          <div class="buttons-container">
+            <button class="button submit-button" id="submit" type="submit">Submit</button>
+            <button class="button clear-button" id="clear">Clear</button>
             </div>
-          </div>
+        </form>
         <div class="spinner-border d-none loader" id="spinner"></div>
         <div id="root" class="fetched-users-container">
         </div>
