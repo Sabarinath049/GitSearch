@@ -249,8 +249,8 @@ label, input{
         width: 450px;
     }
     .profile-image{
-        width: 250px;
-        height: 250px;
+        width: 400px;
+        height: 400px;
     }
     .fetched-users-container{
         min-width: 100%;
