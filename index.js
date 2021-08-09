@@ -1,5 +1,6 @@
+let form = document.getElementById("form")
 let root = document.getElementById("root")
-let userDetails = document.getElementById("userProfileDetails")
+let userDetailsContainer = document.getElementById("userDetails")
 let inputElement = document.getElementById("username")
 let errorMessage = document.getElementById("errorParagraph")
 let submitButtonElement = document.getElementById("submit")
@@ -10,7 +11,8 @@ let usernameValue
 const client_id = 'c5868f39180303a9e8e4';
 const client_secret = '32735d5e618c1fc35ce25bcc7c44b0472f590a7c';
 
-submitButtonElement.onclick=function(){
+form.addEventListener('submit',function(event){
+    event.preventDefault()
     if (inputElement.value!==""){
         spinnerElement.classList.remove("d-none")
         root.classList.add("d-none")
@@ -21,20 +23,15 @@ submitButtonElement.onclick=function(){
     else{
         window.alert("Enter Username")
     }
-}
+})
 
 clearButtonElement.onclick=function(){
     inputElement.value=""
     //need to remove root div
 }
 
-function showUserData(login){
-    let h1 = document.createElement("h1")
-    h1.textContent=login
-    userDetails.appendChild(h1)
-}
-
 function displayUserProfile(eachItem){
+    const {url} = eachItem
     spinnerElement.classList.add("d-none")
     root.classList.remove("d-none")
     const {login, avatar_url} = eachItem
@@ -55,15 +52,16 @@ function displayUserProfile(eachItem){
     div.appendChild(heading)
 
     let anchorElement = document.createElement("a")
-    anchorElement.target="_blank"
-    anchorElement.href="#userDetails"
+    anchorElement.target = "_blank"
     div.appendChild(anchorElement)
 
     let viewProfileButton = document.createElement("button")
     viewProfileButton.textContent="View Profile"
     viewProfileButton.classList.add("view-button")
     viewProfileButton.onclick=function(){
-        showUserData(login)
+        window.location.href = "userDetails.html"
+        localStorage.setItem("username",usernameValue)
+        localStorage.setItem("url",url)
     }
     anchorElement.appendChild(viewProfileButton)
 
@@ -76,7 +74,7 @@ async function getData(){
     const options = {
         method: 'GET'
     }
-    const profile = await fetch(userUrl,options)
+    await fetch(userUrl,options)
     .then((respone) => {
         return respone.json()
     })
@@ -86,11 +84,4 @@ async function getData(){
             displayUserProfile(eachItem)
         }
     })
-
-    /*const repo = await fetch(repoUrl,options)
-    .then((respone) => {
-        return respone.json()
-    })
-    .then((jsonData) => {
-    })*/
 }
