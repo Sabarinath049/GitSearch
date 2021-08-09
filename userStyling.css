@@ -445,9 +445,10 @@
         min-width: 180px;
     }
     .profile-button{
-        min-width: 350px;
+        min-width: 1000px;
         padding: 14px;
-        font-size: 20px;
+        font-size: 40px;
+        height: 100px;
     }
     .user-profile-image{
         width: 500px;
@@ -455,9 +456,9 @@
     }
     .stat-item{
         margin: 20px;
-        width: 200px;
+        width: 450px;
         padding: 14px;
-        font-size: 20px;
+        font-size: 40px;
     }
     .stats-details-container{
         justify-content: center;
